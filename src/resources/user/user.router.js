@@ -1,9 +1,12 @@
 import { Router } from 'express'
-import { me, updateMe } from './user.controllers'
+
+const controller = (req, res) => {
+  res.send({ message: 'hello' })
+}
 
 const router = Router()
 
-router.get('/', me)
-router.put('/', updateMe)
+router.get('/', controller)
+router.put('/', controller)
 
 export default router
